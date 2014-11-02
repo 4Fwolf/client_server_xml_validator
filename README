@@ -1,0 +1,101 @@
+======================
+ License
+======================
+ * Copyright 2014 Sasha Halchin.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+
+======================
+ System requirements
+======================
+- Unix
+  - Terminal.
+  - GCC 4.7.1 or higher.
+
+- Windows
+  - MinGW Code Blocks with GCC.
+  - "-std=c++11" flag in compiler settings.
+
+======================
+ How to install
+======================
+- Unix:
+  1) Open the terminal.
+  2) Build the project using "make", and TRLWO-1286 will be created.
+  3) Run TRLWO-1286.
+
+- Windows
+  1) Open Code blocks.
+  2) Create project.
+  3) Add files to the project.
+  4) Build the project.
+  5) Run <project>.exe.
+
+======================
+ How to use
+======================
+Command format: <Mode> <Port> <IP> <File>
+
+- For server
+  s <Port> n n
+
+- For client
+  c <Port> <IP> <Path/to/file>
+
+======================
+ Contacts
+======================
+Skype: gr1iff
+Mail: sasha.halchin@gmail.com
+
+======================
+ Change log
+======================
+v4.0
+  1) Now log line looks: <time stamp> <client ip> “<responce>” <handling time>
+  2) Created separate modules for both platforms.
+  3) Raw pointers replaced to "shared_ptr".
+  4) Now file saved as temporary.
+  5) Replaced format of command.
+  6) Removed limit of 3 income connections.
+  7) Removed global variables.
+
+v3.0
+  1) Server and client apps merged in one app.
+  2) Now app could be compiled on Linux and on Windows.
+  3) Added changing port and IP for connection.
+
+  - Server part:
+   * Added parser for xml-rpc files.
+   * Added validator.
+   * Added functional for sending results of validating to client.
+   * Added logging.
+
+  - Client part:
+   * Added functional for receiving results of validating.
+
+v2.0
+  - Server part:
+   * Added receiving files from client.
+
+  - Client part:
+   * Added sending files to server.
+
+v1.0
+  - Server part:
+   * Added connection on predefined port.
+   * Added some includes for all platforms.
+
+  - Client part:
+   * Added connection on predefined port.
+   * Added some includes for all platforms.

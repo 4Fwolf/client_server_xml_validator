@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrunner>
+	<uut name="UUT_one">
+		<Patient>
+			<type name="ecg">
+				<instrument name="prosim8_one" driver="ecg_impl_prosim8">
+					<interface type="serial" port="COM4" params="115200,8,N,1" />
+				</instrument>
+			</type>
+		</Patient>
+		<Device>
+			<type name="gui">
+				<instrument name="gui_sim_one" driver="simulator">
+					<interface type="socket" port="80" host="192.168.0.1" />
+				</instrument>				
+			</type>
+		</Device>
+	</uut>
+	<uut name="UUT_two">
+		<Patient>
+			<type name="ecg">
+				<instrument name="prosim8_two" driver="ecg_impl_prosim8">
+					<interface type="serial" port="COM4" params="115200,8,N,1" />
+				</instrument>
+			</type>
+		</Patient>
+		<Device>
+			<type name="gui">
+				<instrument name="gui_sim_two" driver="simulator">
+					<interface type="socket" port="80" host="192.168.0.1" />
+				</instrument>				
+			</type>
+		</Device>
+	</uut>
+	<uut>
+		<Patient>
+			<type name="ecg">
+				<instrument name="prosim8_0" driver="ecg_impl_prosim8">
+					<interface type="serial" port="COM4" params="115200,8,N,1" />
+				</instrument>
+			</type>
+		</Patient>
+		<Device>
+			<type name="gui">
+				<instrument name="gui_sim_0" driver="simulator">
+					<interface type="socket" port="80" host="192.168.0.1" />
+				</instrument>				
+			</type>
+		</Device>
+	</uut>
+	<uut>
+		<Patient>
+			<type name="ecg">
+				<instrument name="prosim8_1" driver="ecg_impl_prosim8">
+					<interface type="serial" port="COM4" params="115200,8,N,1" />
+				</instrument>
+			</type>
+		</Patient>
+		<Device>
+			<type name="gui">
+				<instrument name="gui_sim_1" driver="simulator">
+					<interface type="socket" port="80" host="192.168.0.1" />
+				</instrument>				
+			</type>
+		</Device>
+	</uut>
+</testrunner>
